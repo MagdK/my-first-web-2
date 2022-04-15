@@ -1,0 +1,57 @@
+{
+    "id": "beers",
+    "logo": "Best Beers",
+    "button": "details",
+    "cards": [
+        {
+            "name": "Maddie Bay",
+            "occupation": "Mad Scientist Beer",
+            "age": 32
+        },
+        {
+            "name": "Tate Mate",
+            "occupation": "Rothbeer Brewery",
+            "age": 19
+        },
+        {
+            "name": "Timothy Rabbit",
+            "occupation": "MONYO Brewing Co.",
+            "age": 59
+        },
+        {
+            "name": "Lindsey Koen",
+            "occupation": "Mad Scientist Beer",
+            "age": 31
+        },
+        {
+            "name": "Manci Frog",
+            "occupation": "Samuel Smith Old Brewery",
+            "age": 63
+        },
+        {
+            "name": "Anja Maus",
+            "occupation": "Thornbridge Brewery",
+            "age": 27
+        },
+        {
+            "name": "Vladek Maus",
+            "occupation": "Samuel Smith Old Brewery",
+            "age": 47
+        },
+        {
+            "name": "Bibi Bishon",
+            "occupation": "BrewDog",
+            "age": 23
+        },
+        {
+            "name": "Roomba Ron",
+            "occupation": "Fuller's",
+            "age": 54
+        },
+        {
+            "name": "Richie Rich",
+            "occupation": "Tempest Brewing Company",
+            "age": 36
+        }
+    ]
+}
