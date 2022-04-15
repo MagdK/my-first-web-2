@@ -4,9 +4,11 @@ function pageContent(subscribers) {
     for(let subscriber of subscribers) {
         myStr = myStr.concat(
             `
-            <h1>${subscriber.name}</h1>
-            <p>${subscriber.occupation}</p>
-            <p>${subscriber.age}</p>
+            <div>
+                <h1>${subscriber.name}</h1>
+                <p>${subscriber.occupation}</p>
+                <p>${subscriber.age}</p>
+            </div>
             `
         )
     }
