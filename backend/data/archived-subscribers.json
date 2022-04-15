@@ -1,0 +1,57 @@
+{
+    "id": "beers",
+    "logo": "Best Beers",
+    "button": "details",
+    "cards": [
+        {
+            "name": "Rosie Bay",
+            "occupation": "Teacher",
+            "age": 24
+        },
+        {
+            "name": "Rita Pita",
+            "occupation": "Bus driver",
+            "age": 45
+        },
+        {
+            "name": "Toto Bunny",
+            "occupation": "Sales manager",
+            "age": 91
+        },
+        {
+            "name": "Lola Koen",
+            "occupation": "Mad Scientist Beer",
+            "age": 61
+        },
+        {
+            "name": "Bibi Frog",
+            "occupation": "Samuel Smith Old Brewery",
+            "age": 43
+        },
+        {
+            "name": "Luisa Maus",
+            "occupation": "Thornbridge Brewery",
+            "age": 24
+        },
+        {
+            "name": "Vlad Maus",
+            "occupation": "Samuel Smith Old Brewery",
+            "age": 42
+        },
+        {
+            "name": "Bobi Bishon",
+            "occupation": "BrewDog",
+            "age": 21
+        },
+        {
+            "name": "Roda Ron",
+            "occupation": "Fuller's",
+            "age": 57
+        },
+        {
+            "name": "Rudi Rich",
+            "occupation": "Tempest Brewing Company",
+            "age": 45
+        }
+    ]
+}

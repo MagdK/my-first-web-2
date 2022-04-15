@@ -12,6 +12,7 @@ const publicFolder = path.join(frontendFolder, 'pub');
 // join a perjelet hozzaadja
 const dataFolder = path.join(__dirname, 'data');
 const subscriberFile = path.join(dataFolder, 'subscribers.json')
+const archivedSubscriberFile = path.join(dataFolder, 'archived-subscribers.json')
 // adds a middleware for serving static files to your Express app.
 // elso parameter a use-ban az az, hogy az url ben mivel kezdodik, masodik meg az eleresi utvonal
 app.use('/pub', express.static(publicFolder));
@@ -47,6 +48,18 @@ app.get('/subscribers/under25', (req, res) => {
             const subscribersUnderTwentyfive = cards.filter(subscriber => subscriber.age < 25)
             res.send(subscribersUnderTwentyfive)
     
+        }
+    })
+});
+
+app.get('/subscribers/archived', (req, res) => {
+    fs.readFile(archivedSubscriberFile, (error, data) => {
+        if (error) {
+            res.send("Something went a tiny bit wrong")
+        } else {
+            const subscribers = JSON.parse(data)
+            const cards = subscribers.cards
+            res.send(cards);
         }
     })
 });
