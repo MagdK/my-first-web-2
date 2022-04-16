@@ -11,58 +11,20 @@ const frontendFolder = path.join(__dirname, '../frontend');
 const publicFolder = path.join(frontendFolder, 'pub');
 // join a perjelet hozzaadja
 const dataFolder = path.join(__dirname, 'data');
-const subscriberFile = path.join(dataFolder, 'subscribers.json')
-const archivedSubscriberFile = path.join(dataFolder, 'archived-subscribers.json')
+const dataFile = path.join(dataFolder, 'data.json')
+
 // adds a middleware for serving static files to your Express app.
 // elso parameter a use-ban az az, hogy az url ben mivel kezdodik, masodik meg az eleresi utvonal
 app.use('/pub', express.static(publicFolder));
 
-
-console.log(dataFolder);
-// app.use('/api', express.static(dataFolder));
-
-app.get('/subscribers', (req, res) => {
-    res.sendFile(path.join(frontendFolder, 'index.html'));
+app.get("/", (request, response) => {
+    response.sendFile(path.join(frontendFolder, 'index.html'));
 });
 
-app.get('/subscribers/all', (req, res) => {
-    fs.readFile(subscriberFile, (error, data) => {
-        if (error) {
-            res.send("Something went a bit wrong")
-        } else {
-            const subscribers = JSON.parse(data)
-            const cards = subscribers.cards
-            res.send(cards);
-    
-        }
-    })
+app.get("/data/data.json", (request, response) => {
+    response.sendFile(path.join(dataFolder, 'data.json'));
 });
 
-app.get('/subscribers/under25', (req, res) => {
-    fs.readFile(subscriberFile, (error, data) => {
-        if (error) {
-            res.send("Something went very wrong")
-        } else {
-            const subscribers = JSON.parse(data)
-            const cards = subscribers.cards
-            const subscribersUnderTwentyfive = cards.filter(subscriber => subscriber.age < 25)
-            res.send(subscribersUnderTwentyfive)
-    
-        }
-    })
-});
-
-app.get('/subscribers/archived', (req, res) => {
-    fs.readFile(archivedSubscriberFile, (error, data) => {
-        if (error) {
-            res.send("Something went a tiny bit wrong")
-        } else {
-            const subscribers = JSON.parse(data)
-            const cards = subscribers.cards
-            res.send(cards);
-        }
-    })
-});
 
 
 
