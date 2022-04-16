@@ -12,7 +12,7 @@ const publicFolder = path.join(__dirname, '../frontend/pub');
 const dataFolder = path.join(__dirname, '/data')
 
 app.get('/', (req, res) => {
-    res.sendFile(frontendFolder)
+    res.sendFile(path.join(frontendFolder, 'index.html'));
 });
 
 app.listen(port, () => {
