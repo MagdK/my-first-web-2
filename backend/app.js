@@ -9,7 +9,7 @@ app.use(express.json());
 const pathToFrontend = path.join(__dirname, '../frontend');
 const pathToIndex = path.join(pathToFrontend, 'index.html');
 const pathToPub = path.join(pathToFrontend, 'public');
-const pathToData = path.join(pathToPub, 'data');
+const pathToData = path.join(pathToPub, 'img-data');
 const pathToDataJson = path.join(pathToData, 'data.json');
 
 app.use('/', express.static(pathToPub));
@@ -18,6 +18,9 @@ app.get('/', (req,res) => {
     res.send("I am still trying")
 });
 
+app.get('/data', (req, res) => {
+    res.sendFile(pathToDataJson)
+});
 
 
 app.listen(port, () => {
