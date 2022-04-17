@@ -12,10 +12,10 @@ const pathToPub = path.join(pathToFrontend, 'public');
 const pathToData = path.join(pathToPub, 'img-data');
 const pathToDataJson = path.join(pathToData, 'data.json');
 
-app.use('/', express.static(pathToPub));
+app.use('/pub', express.static(pathToPub));
 
 app.get('/', (req,res) => {
-    res.send("I am still trying")
+    res.sendFile(pathToIndex)
 });
 
 app.get('/data', (req, res) => {
