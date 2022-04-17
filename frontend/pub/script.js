@@ -21,7 +21,6 @@ async function fetchData() {
     return await fetchJSON("http://127.0.0.1:9001/data/data.json")
 };
 
-
 async function loadEvent() {
     const rootElement = document.getElementById('root');
     const artists = await fetchData();
