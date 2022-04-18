@@ -1,16 +1,17 @@
 const pageContentHTML = (memories) => {
     return memories.map(memory => {
+        // destructuring example from json
+        const {occasion, year} = memory
         return (
             `
             <div>
-                <p>${memory.memory}</p>
-                <p>${memory.occasion}</p>
-                <p>${memory.year}</p>
+                <p>${occasion}</p>
+                <p>${year}</p>
             </div>
             `
         )
     }).join("")
-}
+};
 
 fetchMemories = async () => {
     const memoryData = await fetch(`http://127.0.0.1:9003/data`);
