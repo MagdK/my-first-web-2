@@ -28,6 +28,9 @@ loadEvent = async () => {
     const rootElement = document.getElementById("root");
 
     rootElement.innerHTML = pageContentHTML(memories);
+
+    /*movies.sort(function(a, b){return a.year - b.year});
+//     console.log(movies); */
 };
 
 window.addEventListener("load", loadEvent);
